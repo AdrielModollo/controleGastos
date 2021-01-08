@@ -1,12 +1,22 @@
-CREATE DATABASE controleGastos;
+CREATE DATABASE controlegastos;
 
-USE controleGastos;
+USE controlegastos;
 
 create table usuarios (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     senha VARCHAR(32) NOT NULL
+);
+
+CREATE TABLE pagamentos(
+	codigo INT AUTO_INCREMENT PRIMARY KEY,
+	valor FLOAT ,
+	decimoTerceiro FLOAT,
+	vale FLOAT,
+	ticket FLOAT,
+	dataPagamento DATE,
+	TOTAL FLOAT
 );
 
 CREATE TABLE gastos(
@@ -25,17 +35,6 @@ CREATE TABLE gastos(
 );
 
 
-CREATE TABLE pagamentos(
-	codigo INT AUTO_INCREMENT PRIMARY KEY,
-	valor FLOAT ,
-	decimoTerceiro FLOAT,
-	vale FLOAT,
-	dataPagamento DATE,
-	TOTAL FLOAT,
-);
-
-
-
 CREATE TABLE poupanca (
     codigo INT AUTO_INCREMENT PRIMARY KEY,
 	depositar FLOAT,
@@ -44,6 +43,13 @@ CREATE TABLE poupanca (
 	dataDeposito DATE,
 	totalDisponivel FLOAT
 );
+
+CREATE TABLE CLIENTES(
+	Codigo INT AUTO_INCREMENT PRIMARY KEY,
+	Nome VARCHAR(255) NOT NULL,
+	Servidor VARCHAR(255) NOT NULL,
+	status ENUM ('ativo','inativo') NOT NULL
+)
 
 
 

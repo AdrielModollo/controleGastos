@@ -9,54 +9,43 @@
         <h1>Cadastro de tarefas</h1>
         <?php
         echo validation_errors();
-        echo form_open("tarefas/novo");
+        echo form_open("gastos/novo");
 
-        echo form_label("Nome", "Nome");
+        echo form_label("Nome", "nome");
         echo form_input(array(
-            "name" => "Nome",
+            "name" => "nome",
             "class" => "form-control",
-            "id" => "Nome",
+            "id" => "nome",
             "maxlength" => "255",
         ));
 
 
-        echo form_label("Comando", "Comando");
+        echo form_label("Comando", "descricao");
         echo form_input(array(
-            "name" => "Comando",
+            "name" => "descricao",
             "class" => "form-control",
-            "id" => "Comando",
+            "id" => "descricao",
             "maxlength" => "255",
             "type" => "TEXT",
         ));
 
         echo("<br />");
 
-        echo form_label("Periodicidade", "Periodicidade");
-        $periodicidade = [
-            'diaria' => 'diaria',
-            'semanal' => 'semanal',
-            'mensal' => 'mensal',
-            'semestral' => 'semestral',
-            'anual' => 'anual'
+        echo form_label("Forma de Pagamento", "formaPagamento");
+        $formaPagamento = [
+            'debito' => 'debito',
+            'credito' => 'credito',
         ];
-        echo form_dropdown('Periodicidade', $periodicidade, 'diaria');
+        echo form_dropdown('formaPagamento', $formaPagamento, 'debito');
 
         echo("<br /><br />\n");
 
-        echo form_label("Horario", "Horario");
-        echo form_input(array(
-            "name" => "Horario",
-            "class" => "form-control",
-            "id" => "Horario",
-            "type" => "TIME",
-        ));
-
-        echo form_label("QuantidadeMinutosEsperadoExecucao", "QuantidadeMinutosEsperadoExecucao");
-        echo form_input(array(
-            "name" => "QuantidadeMinutosEsperadoExecucao",
-            "class" => "form-control",
-            "id" => "QuantidadeMinutosEsperadoExecucao",
-        ));
+        echo form_label("Item Pago?", "itemPago");
+        $formaPagamento = [
+            'SIM' => 'SIM',
+            'NAO' => 'NAO',
+        ];
+        echo form_dropdown('itemPago', $itemPago, 'SIM');
 
         echo("<br />\n");
 
