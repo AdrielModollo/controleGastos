@@ -94,10 +94,11 @@
             "content" => "Cadastrar",
             "type" => "submit"
         ));
+        //teste form
 
         echo form_close();
         ?>
-    
+
         </div>
     </body>
 </html>
