@@ -73,21 +73,6 @@
         echo $DataCadastro;
 
         echo("<br /><br />\n");
-
-        echo form_label("Projeto", "idProjeto");
-        echo form_dropdown('idProjeto', $projetos);
-
-        echo("<br /><br />\n");
-
-        echo form_label("Cliente", "idCliente");
-        echo form_dropdown('idCliente', $clientes);
-
-        echo("<br /><br />\n");
-
-        echo form_label("Linguagem", "idLinguagem");
-        echo form_dropdown('idLinguagem', $linguagens);
-
-        echo("<br /><br />\n");
         
         echo form_button(array(
             "class" => "btn btn-primary",
