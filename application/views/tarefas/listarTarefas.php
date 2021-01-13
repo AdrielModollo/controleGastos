@@ -18,9 +18,6 @@
                     <th>Status Tarefa</th>
                     <th>Status Sistema</th>
                     <th>Data Cadastro</th>
-                    <th>Projeto</th>
-                    <th>Cliente</th>
-                    <th>Linguagem</th>
                 </tr>
 
                 <tr>
@@ -31,12 +28,6 @@
                     <td><?=ucfirst($tarefa["Periodicidade"])?></td>
                     <td><?=$tarefa["Horario"] ?></td>
                     <td><?=$tarefa["QuantidadeMinutosEsperadoExecucao"] ?></td>
-                    <td><?=ucfirst($tarefa["StatusTarefa"]) ?></td>
-                    <td><?=$tarefa["StatusSistema"] ?></td>
-                    <td><?=$tarefa["DataCadastro"] ?></td>
-                    <td><?=$tarefa["Projeto"] ?></td>
-                    <td><?=$tarefa["Cliente"] ?></td>
-                    <td><?=$tarefa["Linguagem"] ?></td>
                     <!--Exemplo de conversão de números em Real com Helper
                     <td><//?=numeroEmReais($tarefa["QuantidadeMinutosEsperadoExecucao"]) ?></td>
                      -->  
